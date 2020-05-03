@@ -1,0 +1,11 @@
+<div>
+    {{totalCount}}
+</div>
+<div>
+    <input type="text" #titleInput class="form-control">
+
+    <button type="button" (click)="showText(titleInput.value)" class="btn btn-primary">Show Button value!</button>
+</div>
+
+
+<app-header [childMessage] = 'hello'></app-header>
