@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -15,13 +16,14 @@ hello: String = 'Arizona';
     this.http.get('https://covid-simple-api.now.sh/api/world').subscribe(response => {
 
       this.totalCount = response['totalCases']
-      console.log(response)
+      console.log(response);
       
+    })
+  
     }
+  
 
-    )
-
-  }
+  
   showText(title: string) {
     if (title != "") {
      

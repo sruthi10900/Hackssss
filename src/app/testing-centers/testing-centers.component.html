@@ -1,4 +1,4 @@
-<p>testing-centers works!</p>
+
 <div  *ngIf="retrive == false">
 <input type="text" #titleInput class="form-control">
   
@@ -7,18 +7,18 @@
 
 
 
-<table>
+<table  frame=void rules=rows style="border:1px solid black;margin-left:auto;margin-right:auto">
     
-    <thead *ngIf="retrive == true">
+    <thead style="padding: 10px;border:1px solid black;" *ngIf="retrive == true">
         <th>Name</th>
         <th>Mobile</th>
         <th>Address</th>
     </thead>
-    <tbody>
-        <tr *ngFor="let item of organization">
+    <tbody style="border:1px solid black;">
+        <tr style="padding: 15px;" *ngFor="let item of organization">
             <td>{{item.name}}</td>
-        <td> {{item.phones[0].number}}</td>
-        <td *ngIf = "item.physical_address[0]"> {{item.physical_address[0].address_1}}{{item.physical_address[0].city}}</td>
+        <td  style="padding: 15px;"> {{item.phones[0].number}}</td>
+        <td  style="padding: 15px;" *ngIf = "item.physical_address[0]"> {{item.physical_address[0].address_1}} , {{item.physical_address[0].city}} , {{item.physical_address[0].postal_code}}, {{item.physical_address[0].state_province}}</td>
         </tr>
     </tbody>
 </table>
@@ -29,6 +29,3 @@
     {{item.phones[0].number}}
 
 </div> -->
-<div *ngIf="retrive == true">
-    <button type="button" (click) = "goBack()" class="btn btn-primary">Back!</button>
-</div>

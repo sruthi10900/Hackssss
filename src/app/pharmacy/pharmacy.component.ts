@@ -46,16 +46,17 @@ export class PharmacyComponent implements OnInit {
         animationEnabled: true,
         theme: "light2", // "light1", "light2", "dark1", "dark2"
         title:{
-          text: "Top Oil Reserves"
+          text: "County Cases"
         },
-        axisY: {
-          title: "Reserves(MMbbl)"
-        },
+        axisX:{
+          title : "County"
+         },
+         axisY:{
+          title : "Confirmed Cases Count"
+         },
         data: [{        
           type: "column",  
-          showInLegend: true, 
-          legendMarkerColor: "grey",
-          legendText: "MMbbl = one million barrels",
+         
           dataPoints: dataPoints1
         }]
       });
